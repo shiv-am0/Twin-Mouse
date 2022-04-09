@@ -1,6 +1,4 @@
-import JsonParsing.CoordinateJson
 import utils.API.api
-import utils.CONSTANTS
 import java.awt.Robot
 
 class DiscordBuilder {
@@ -11,11 +9,12 @@ class DiscordBuilder {
         for (cha in api.channels) {
             println(cha.toString())
         }
+        return
     }
 
     fun fetchCoordinates(data: String) {
         println("Data = $data")
-        coordinates = data.split("&");
+        coordinates = data.split("&")
         val x = Integer.parseInt(coordinates[0])
         val y = Integer.parseInt(coordinates[1])
 
